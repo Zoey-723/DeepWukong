@@ -249,7 +249,7 @@ def getCodeIDtoPathDict(testcases: List,
         for file in files:
             path = file.attrib["path"]
             flaws = file.findall("flaw")
-            mixeds = file.findall("mixed")
+            mixeds = file.findall("mixed/line")
             fix = file.findall("fix")
             # print(mixeds)
             VulLine = set()
@@ -260,7 +260,11 @@ def getCodeIDtoPathDict(testcases: List,
                         VulLine.add(int(flaw.attrib["line"]))
                 if (mixeds != []):
                     for mixed in mixeds:
-                        VulLine.add(int(mixed.attrib["line"]))
+                        line_range = mixed.text
+                        start, end = map(int, line_range.split('~'))
+
+                        for line_number in range(start, end + 1):
+                            VulLine.add(line_number)
 
             codeIDtoPath[testcaseid][path] = VulLine
 

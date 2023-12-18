@@ -14,7 +14,7 @@ log_every_epoch: 10
 progress_bar_refresh_rate: 1
 
 dataset:
-  name: CWE119
+  name: jsData
   token:
     max_parts: 16
     is_wrapped: false

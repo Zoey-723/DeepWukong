@@ -1,0 +1,95 @@
+<?xml version="1.0" ?>
+<!-- 修改寻找vulline的代码，在data_generator.py的getCodeIDtoPathDict-->
+<!-- mixeds = file.findall("mixed/line")
+    if mixeds:
+        for mixed in mixeds:
+            line_range = mixed.text
+            start, end = map(int, line_range.split('~'))
+
+            for line_number in range(start, end + 1):
+                VulLine.add(line_number) -->
+<container>
+  <testcase id="1">
+    <file path="js-1\initFileServer.js">
+      <mixed>
+        <line>15~40</line>
+        <line>42~65</line>
+      </mixed>
+    </file>
+  </testcase>
+  <testcase id="2">
+    <file path="js-9\errors.js">
+      <mixed>
+        <line>94~96</line>
+      </mixed>
+    </file>
+  </testcase>
+  <testcase id="3">
+    <file path="js-35\utils.js">
+      <mixed>
+        <line>84~93</line>
+        <line>97~143</line>
+      </mixed>
+    </file>
+  </testcase>
+  <testcase id="4">
+    <file path="js-58\web.js">
+      <mixed>
+        <line>336~394</line>
+      </mixed>
+    </file>
+  </testcase>
+  <testcase id="5">
+    <file path="js-77\user.js">
+      <mixed>
+        <line>38~67</line>
+      </mixed>
+    </file>
+  </testcase>
+  <testcase id="6">
+    <file path="js-80\airbrake.js">
+      <mixed>
+        <line>267~291</line>
+        <line>297~314</line>
+        <line>319~321</line>
+        <line>329~335</line>
+      </mixed>
+    </file>
+  </testcase>
+  <testcase id="7">
+    <file path="js-114\install.js">
+      <mixed>
+        <line>7~20</line>
+      </mixed>
+    </file>
+  </testcase>
+  <testcase id="8">
+    <file path="js-115\compile.js">
+      <mixed>
+        <line>1165~1192</line>
+        <line>1141~1157</line>
+      </mixed>
+    </file>
+  </testcase>
+  <testcase id="9">
+    <file path="js-231\interpolate.js">
+      <mixed>
+        <line>126~145</line>
+      </mixed>
+    </file>
+  </testcase>
+  <testcase id="10">
+    <file path="js-239\parse.js">
+      <mixed>
+        <line>4~5</line>
+        <line>36~36</line>
+        <line>208~213</line>
+        <line>584~624</line>
+        <line>709~722</line>
+        <line>732~792</line>
+        <line>807~818</line>
+        <line>821~837</line>
+      </mixed>
+    </file>
+  </testcase>
+</container>
